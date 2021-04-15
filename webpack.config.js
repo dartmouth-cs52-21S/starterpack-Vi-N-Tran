@@ -13,6 +13,9 @@ module.exports = {
   mode: env,
   entry: ['./src'], // this is where our app lives
   devtool: 'source-map', // this enables debugging with source in chrome devtools
+  devServer: {
+    hot: true,
+  },
   module: {
     rules: [
       {
