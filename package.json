@@ -1,0 +1,24 @@
+{
+  "name": "starterpack-vi-n-tran",
+  "version": "1.0.0",
+  "description": "sa2 cs52",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dartmouth-cs52-21S/starterpack-Vi-N-Tran.git"
+  },
+  "author": "Vi Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dartmouth-cs52-21S/starterpack-Vi-N-Tran/issues"
+  },
+  "homepage": "https://github.com/dartmouth-cs52-21S/starterpack-Vi-N-Tran#readme",
+  "devDependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
