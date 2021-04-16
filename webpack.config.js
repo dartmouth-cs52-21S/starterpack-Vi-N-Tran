@@ -1,5 +1,6 @@
 const env = process.env.NODE_ENV || 'development';
 // set to 'production' or 'development' in your env
+const path = require('path');
 
 const autoprefixer = require('autoprefixer');
 const postcssPresets = require('postcss-preset-env');
@@ -66,8 +67,15 @@ module.exports = {
               sourceMap: true,
             },
           },
+          {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
+          },
         ],
       },
+      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
+      { test: /\.tsx?$/, loader: 'ts-loader' },
     ],
   },
   plugins: [
@@ -80,4 +88,12 @@ module.exports = {
       filename: './index.html',
     }),
   ],
+  resolve: {
+    // Add `.ts` and `.tsx` as a resolvable extension.
+    extensions: ['.ts', '.tsx', '.js'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
 };
