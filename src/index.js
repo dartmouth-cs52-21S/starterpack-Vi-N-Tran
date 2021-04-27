@@ -21,8 +21,8 @@ const FallBack = (props) => {
 const App = (props) => {
   return (
     <Router>
+      <Nav />
       <Switch>
-        <Nav />
         <Route exact path="/" component={Welcome} />
         <Route path="/about" component={About} />
         <Route exact path="/test/:id" component={Test} />
